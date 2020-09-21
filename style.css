@@ -4,7 +4,11 @@
     border: 1px solid green;
 }
 body {
-    background: url(GuessTheNumber.png);
+    background: url('./img/GuessTheNumber.png');
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+h3, p{
+    display: none;
 }
