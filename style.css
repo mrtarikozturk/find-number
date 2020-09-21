@@ -1,1 +1,10 @@
-
+* {
+    margin: 0;
+    padding: 0;
+    border: 1px solid green;
+}
+body {
+    background: url(GuessTheNumber.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
