@@ -1,9 +1,12 @@
-let rndm = Math.floor(Math.random() * 101); /* Rasgele sayı üretmek için Math (0 dahil 1   hariç)*/
-document.getElementById("btn").addEventListener("click",check)
-
+let button = document.getElementById("btn");
 let message = document.getElementById('message');
 let counter_p = document.getElementById('number');
 let input =  document.getElementById("text");
+
+button.addEventListener("click",check);
+input.addEventListener("keypress", onEnter);
+
+let rndm = Math.floor(Math.random() * 101); /* Rasgele sayı üretmek için Math (0 dahil 1   hariç)*/
 let counter = 0;
 
 
@@ -35,7 +38,6 @@ function check() {
         
     }else {
         message.innerText="I am thinking about lower number";
-        
     }
 
     counter++;
@@ -43,5 +45,13 @@ function check() {
     input.focus();
     input.value = '';
 
-
 }
+
+function onEnter(event) {
+    if (event.key === "Enter") {
+        button.click();
+    }
+}
+
+
+
