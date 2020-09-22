@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    border: 1px solid green;
 }
 body {
     background: url('./img/GuessTheNumber.png');
@@ -9,6 +8,25 @@ body {
     background-repeat: no-repeat;
 }
 
-h3, p{
-    display: none;
+.container{
+   margin: 100px auto;
+   text-align: center;
 }
+
+#text, #btn{
+   font-size: 24px;
+   height: 32px;
+   margin:0 10px;
+   border-radius: 5px;
+}
+
+#btn{
+    width: 75px;
+    margin-top: 40px;
+}
+
+#message{
+    padding: 15px;
+}
+
+
