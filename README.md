@@ -33,6 +33,7 @@ You're sections headers will be used to reference location of destination.
 - CSS3
 - Javascript
 - VS Code
+- Git
 
 
 
