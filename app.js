@@ -9,18 +9,19 @@ input.addEventListener("keypress", onEnter);
 let rndm = Math.floor(Math.random() * 101); /* Rasgele sayı üretmek için Math (0 dahil 1   hariç)*/
 let counter = 0;
 
+input.focus();
+input.tabIndex = '0';
+button.tabIndex = '1';
+
 
 function check() {
 
     let num = Number(input.value);
     
     if(isNaN(num) || num == ''){
-        if(message.style.display="none"){
-            message.style.display="block";
-            message.innerText="Are you sure that this is a number?";
-        }else{
-            message.innerText="Are you sure that this is a number?";
-        }
+        
+        message.innerText="Are you sure that this is a number?";
+        clear();
         return;
     }
 
@@ -42,8 +43,7 @@ function check() {
 
     counter++;
     counter_p.innerText = `This is your test number: ${counter}`;
-    input.focus();
-    input.value = '';
+    clear();
 
 }
 
@@ -53,5 +53,8 @@ function onEnter(event) {
     }
 }
 
-
+function clear(){
+    input.focus();
+    input.value = '';
+}
 
